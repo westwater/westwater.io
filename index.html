@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Pacifico);.h1,a {
+                color: #fff
+            }
+
+            .aniamte-contact-in,.animate-text-in,a:before {
+                position: absolute
+            }
+
+            @-webkit-keyframes keyframes-animate-in {
+                0%,100%,80% {
+                    opacity: 0
+                }
+
+                6% {
+                    opacity: 0;
+                    -webkit-transform: translateY(-30px);
+                    -ms-transform: translateY(-30px);
+                    transform: translateY(-30px)
+                }
+
+                10%,25% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    transform: translateY(0)
+                }
+
+                29% {
+                    opacity: 0;
+                    -webkit-transform: translateY(30px);
+                    -ms-transform: translateY(30px);
+                    transform: translateY(30px)
+                }
+            }
+
+            @-webkit-keyframes keyframes-animate-contact-in {
+                0% {
+                    opacity: 0
+                }
+
+                6% {
+                    opacity: 0;
+                    -webkit-transform: translateY(-30px);
+                    -ms-transform: translateY(-30px);
+                    transform: translateY(-30px)
+                }
+
+                10%,100%,25% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    transform: translateY(0)
+                }
+            }
+
+            html {
+                overflow: hidden;
+            }
+
+            body {
+                background-color: #3076b9;
+                font-size: 14px;
+                font-family: Pacifico,serif
+            }
+
+            a {
+                text-decoration: none
+            }
+
+            a:before {
+                content: "";
+                background-color: #fff;
+                height: 3px;
+                width: 100%;
+                bottom: 15px;
+                -webkit-transition: background-color .2s ease-in-out;
+                -o-transition: background-color .2s ease-in-out;
+                transition: background-color .2s ease-in-out
+            }
+
+            a:hover:before {
+                background-color: #EC6B26
+            }
+
+            .h1 {
+                font-size: 3rem
+            }
+
+            .flex-wrapper {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                height: 100vh
+            }
+
+            .animate-contact-in {
+                -webkit-animation: keyframes-animate-contact-in 10s forwards;
+                animation: keyframes-animate-contact-in 10s forwards
+            }
+
+            .animate-text-in {
+                opacity: 0;
+                -webkit-animation: keyframes-animate-in 10s 0s forwards;
+                animation: keyframes-animate-in 10s 0s forwards
+            }
+
+            .animate-text-in:nth-child(2) {
+                -webkit-animation-delay: 2.5s;
+                animation-delay: 2.5s;
+                opacity: 0
+            }
+
+            .animate-text-in:nth-child(3) {
+                -webkit-animation-delay: 5s;
+                animation-delay: 5s;
+                opacity: 0
+            }
+
+            .animate-contact-in {
+                -webkit-animation-delay: 7.5s;
+                animation-delay: 7.5s;
+                opacity: 0;
+                display: inline-block
+            }
+
+            html,body {
+                padding: 0;
+                margin: 0
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-wrapper">
+            <h1 class="h1">westwater.io
+                <span class="animate-text-in">Scala</span>
+                <a class="animate-contact-in" href="mailto:enquiries@westwater.io">Contact</a>
+            </h1>
+        </div>
+    </body>
+</html>
